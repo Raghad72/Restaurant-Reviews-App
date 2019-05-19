@@ -1,4 +1,4 @@
-let cacheStaticName = 'restaurant-static-v2'
+let cacheStaticName = 'restaurant-static-v3'
 let cacheUrls = [
     '/',
     '/index.html',
@@ -53,7 +53,13 @@ self.addEventListener('fetch', function (event) {
     event.respondWith(
         caches.match(event.request).then(function(respons) {
             if (respons) return respons;
-            return fetch(event.request);
+            return fetch(event.request).then(function(response) {
+                response.clone();
+                caches.open(cacheStaticName).then(function(cache) {
+                    cache.put(event.request, responseClone)
+                });
+                return response;
+            })
         })
     )
 });
