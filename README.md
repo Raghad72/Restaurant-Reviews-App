@@ -14,7 +14,7 @@ and accessible for screen reader use. You will also add a service worker to begi
 4. Open App in Browser: http://localhost:8000
 
 ## Resources & Tools
-- [Udacity's starter code] (https://github.com/udacity/mws-restaurant-stage-1.git)
--  [MapBox API key] (https://account.mapbox.com/)
+- [Udacity's starter code](https://github.com/udacity/mws-restaurant-stage-1.git)
+-  [MapBox API key](https://account.mapbox.com/)
 
 
